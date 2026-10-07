@@ -9,6 +9,17 @@ An interactive **Tableau** dashboard that analyses employee attrition — who is
 
 Losing employees is expensive. This dashboard helps HR teams understand attrition at a glance and spot the groups most at risk, using a dataset of **1,470 employees** with **39 attributes** each.
 
+## 📈 Visuals
+
+The first image is the dashboard preview stored in the workbook. Charts built with Python (pandas + matplotlib) from the data files in this repo.
+
+<p align="center"><img src="docs/images/tableau_preview.png" alt="Preview of the Tableau HR Analytics dashboard" width="384"></p>
+<p align="center"><sub>Dashboard preview saved inside the Tableau workbook (top-left section)</sub></p>
+
+<p align="center"><img src="docs/images/attrition_department.png" alt="Attrition rate by department" width="85%"></p>
+
+<p align="center"><img src="docs/images/attrition_age.png" alt="Attrition rate by age band" width="85%"></p>
+
 ## 🗂️ Dataset
 
 `HR Data.xlsx` — one row per employee, including:
