@@ -88,3 +88,7 @@ The dashboard describes patterns in the supplied dataset. Association does not e
 - [Global-CO2-Emissions-Dashboard](https://github.com/Scarface96/Global-CO2-Emissions-Dashboard)
 - [B2B-Sales-Pipeline-CRM-Dashboard-for-TechSolutions-Inc.](https://github.com/Scarface96/B2B-Sales-Pipeline-CRM-Dashboard-for-TechSolutions-Inc.)
 - [Toy-Store-KPI-Report](https://github.com/Scarface96/Toy-Store-KPI-Report)
+
+## About This Project
+
+An HR analytics dashboard designed to help stakeholders explore workforce composition and employee attrition. It demonstrates Tableau dashboard development, calculated fields, KPI reporting and responsible interpretation of people analytics.
