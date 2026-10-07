@@ -1,9 +1,22 @@
 # 👥 HR Analytics Dashboard
 
+**People Analytics | Tableau • Attrition • Workforce KPIs • Data Visualization**
+
 An interactive **Tableau** dashboard that analyses employee attrition — who is leaving the company, from which departments, and what patterns sit behind it.
 
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoft-excel&logoColor=white)
+
+## Business value
+
+Present employee attrition and workforce composition in a dashboard HR stakeholders can explore by department, age and education. This project connects people analytics with visual reporting and stakeholder communication.
+
+### Questions this project addresses
+
+- How does attrition differ across departments?
+- Which age and education groups have higher recorded attrition?
+- How are satisfaction ratings distributed across the workforce?
+
 
 ## 📋 Overview
 
@@ -64,3 +77,14 @@ Calculated fields (age bands, attrition labels) · KPI cards · dashboard design
 ---
 
 👤 **Tony Mulunda** — [GitHub @Scarface96](https://github.com/Scarface96)
+
+## Interpretation & limitations
+
+The dashboard describes patterns in the supplied dataset. Association does not establish why employees leave, and demographic breakdowns should not be used to make individual employment decisions.
+
+## Explore the analytics portfolio
+
+- [sql_retail_sales_p1](https://github.com/Scarface96/sql_retail_sales_p1)
+- [Global-CO2-Emissions-Dashboard](https://github.com/Scarface96/Global-CO2-Emissions-Dashboard)
+- [B2B-Sales-Pipeline-CRM-Dashboard-for-TechSolutions-Inc.](https://github.com/Scarface96/B2B-Sales-Pipeline-CRM-Dashboard-for-TechSolutions-Inc.)
+- [Toy-Store-KPI-Report](https://github.com/Scarface96/Toy-Store-KPI-Report)
