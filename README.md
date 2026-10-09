@@ -1,11 +1,31 @@
 # 👥 HR Analytics Dashboard
 
-**People Analytics | Tableau • Attrition • Workforce KPIs • Data Visualization**
+**People Analytics | Tableau • Python • Statistics • Attrition • Workforce KPIs • Data Visualization**
 
 An interactive **Tableau** dashboard that analyses employee attrition — who is leaving the company, from which departments, and what patterns sit behind it.
 
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoft-excel&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![statsmodels](https://img.shields.io/badge/statsmodels-4051B5?style=flat-square)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+
+## 🌐 Live Report
+
+**[scarface96.github.io/HR-Analysis-Dashboard](https://scarface96.github.io/HR-Analysis-Dashboard/)**
+
+The Tableau workbook is still here. The same data now also drives a Python analysis that publishes an interactive web report, rebuilt by GitHub Actions on every push. No Tableau licence is needed to view it.
+
+**What the Python analysis adds:**
+
+- **Attrition with confidence ranges** by department, age, overtime and travel, so small groups aren't over-read
+- **Overtime × seniority:** 53% of entry-level employees who work overtime have left (82 of 156), against 16% of their peers without overtime
+- **Drivers model:** a logistic regression on 14 factors, shown as odds ratios. Overtime ×5.7, entry-level role ×4.7, poor work-life balance ×3.3, no stock options ×2.7. Being single and pay level stop mattering once seniority and stock are held equal. Cross-validated ROC AUC 0.83.
+- **Early tenure:** staff with two years or less are 23% of the workforce but 43% of leavers
+- **Satisfaction:** the risk sits in the lowest rating on each scale
+- **Cost of attrition:** about $6.8M to replace everyone who left, at a cautious half-year's salary each
+- **Segment explorer:** combine department, overtime, level, age, travel and stock filters to see a group's attrition, its 95% range, and its job-role breakdown
 
 ## Business value
 
@@ -59,9 +79,24 @@ The first image is the dashboard preview stored in the workbook. Charts built wi
 ## 📁 Repository Contents
 
 ```
-├── HR Analytics Dashboard.twb   # Tableau workbook
-├── HR Data.xlsx                 # Employee dataset
-└── README.md
+├── analysis/
+│   ├── data.py        # Loading, cleaning, bands, attrition rates with Wilson intervals, replacement cost
+│   ├── drivers.py     # Logistic regression odds ratios (statsmodels) and cross-validated AUC (scikit-learn)
+│   ├── report.py      # Turns the analysis into the interactive web page
+│   └── build.py       # Charts, segment explorer, site/index.html
+├── tests/             # pytest checks
+├── .github/workflows/deploy.yml   # Test, build and publish to GitHub Pages
+├── HR Analytics Dashboard.twb     # Tableau workbook
+├── HR Data.xlsx
+└── requirements.txt
+```
+
+**Run the Python report locally:**
+
+```bash
+pip install -r requirements.txt
+python -m pytest
+python -m analysis.build    # writes site/index.html
 ```
 
 ## 🚀 How to Use
