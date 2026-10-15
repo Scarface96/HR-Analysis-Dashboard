@@ -27,6 +27,12 @@ The Tableau workbook is still here. The same data now also drives a Python analy
 - **Cost of attrition:** about $6.8M to replace everyone who left, at a cautious half-year's salary each
 - **Segment explorer:** combine department, overtime, level, age, travel and stock filters to see a group's attrition, its 95% range, and its job-role breakdown
 
+## 📊 Tableau & Power BI
+
+The Tableau workbook is in the repo root. [`bi/`](bi/) adds a **Power BI** kit built on the same data: a model-ready table, ready-to-paste DAX measures, a branded theme, a page-by-page layout, and the exact numbers the finished report should show.
+
+**[Open the build guide →](bi/README.md)**
+
 ## Business value
 
 Present employee attrition and workforce composition in a dashboard HR stakeholders can explore by department, age and education. This project connects people analytics with visual reporting and stakeholder communication.
