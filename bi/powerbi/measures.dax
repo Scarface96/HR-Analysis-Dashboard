@@ -1,0 +1,47 @@
+// Power BI measures for HR Analytics
+// Create a measure table first (Home > Enter data > name it _Measures > Load),
+// then for each block: select _Measures > New measure > paste the block > set the format shown.
+
+// Format: #,0
+Employees =
+COUNTROWS ( fact_employee )
+
+// Format: #,0
+Attrition Count =
+SUM ( fact_employee[left_company] )
+
+// Format: 0.0%
+Attrition Rate =
+DIVIDE ( [Attrition Count], [Employees] )
+
+// Format: #,0
+Active Employees =
+[Employees] - [Attrition Count]
+
+// Format: 0.0%
+Company Attrition Rate =
+CALCULATE ( [Attrition Rate], ALL ( fact_employee ) )
+
+// Format: +0.0%;-0.0%;0.0%
+Attrition vs Company =
+[Attrition Rate] - [Company Attrition Rate]
+
+// Format: 0.0
+Avg Age =
+AVERAGE ( fact_employee[age] )
+
+// Format: $#,0
+Avg Monthly Income =
+AVERAGE ( fact_employee[monthly_income] )
+
+// Format: 0.0
+Avg Years at Company =
+AVERAGE ( fact_employee[years_at_company] )
+
+// Format: $#,0
+Replacement Cost (est.) =
+-- Half a year's salary per leaver: a cautious middle of industry estimates.
+SUMX (
+    FILTER ( fact_employee, fact_employee[left_company] = 1 ),
+    fact_employee[monthly_income] * 12 * 0.5
+)

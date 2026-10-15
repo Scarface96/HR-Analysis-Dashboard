@@ -1,0 +1,12 @@
+{
+  "Employees": 1470,
+  "Employees who left": 237,
+  "Attrition rate": 0.1612,
+  "Active employees": 1233,
+  "Average age": 36.9,
+  "Average monthly income": 6503.0,
+  "Highest-attrition department": "Sales (20.6%)",
+  "Attrition with overtime": 0.3053,
+  "Attrition without overtime": 0.1044,
+  "Estimated replacement cost (half a year's salary)": 6807246.0
+}
